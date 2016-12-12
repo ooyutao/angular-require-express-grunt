@@ -1,0 +1,23 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "ejs": "~2.3.1",
+    "express": "~4.12.2",
+    "log4js": "~0.6.26",
+    "restler": "~3.2.2"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.3",
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.2"
+  }
+}

@@ -1,0 +1,2 @@
+/*! web 2016-12-12 */
+define([],function(){var ret=[{state:"home",url:"view/list/home.html",ctrl:"controllers/list/homeCtrl"},{state:"showData",url:"view/list/showData.html",ctrl:"controllers/list/showDataCtrl"},{state:"cont",url:"view/list/cont.html",ctrl:"controllers/list/contCtrl"}];return ret});

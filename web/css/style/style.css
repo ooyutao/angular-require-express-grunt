@@ -1,0 +1,22 @@
+@charset "utf-8";
+/******************  page  ********************/
+body,h1,h2,h3,h4,h5,h6,p,form,ul,li,ol,dt,dd,dl{margin:0;padding:0;}
+b,s,u{font-weight: normal;text-decoration: none;}
+ul,li{list-style:none;}
+img{border:0;}
+
+/******************  common  ********************/
+body{background:#FFF; color: #333;}
+a{color:#000; text-decoration:none;cursor:pointer; }
+a:hover{color:#000; text-decoration:none;}
+.clear{clear:both; height:0; overflow:hidden;}
+.flow{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.ts{ padding: 200px 30px 0 30px; line-height: 26px; text-align: center; color:#666;}
+.error img{display: block; margin:120px auto 20px auto;}
+.error h1{text-align: center; font-size: 12px;}
+
+/******************  base  ********************/
+h1{ font-size: 60px;color:#f00;text-align: center;}
+.back-layer{position: fixed;bottom:0;left:0;right:0;top:0;background: rgba(255,255,255,.3)}
+.back-layer .loading{position: absolute;width: 200px;height: 150px;text-align: center;left:50%;top:50%;margin: -70px auto auto -100px;color: #999;}
+.back-layer .loading img{display: block;margin:0 auto 20px; width: 70px; }

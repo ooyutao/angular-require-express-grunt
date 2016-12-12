@@ -1,0 +1,13 @@
+<div>
+    <h3><a href="javascript:history.back()">后退</a></h3>
+    <div style="margin:20px;line-height: 30px; ">
+        <h4 ng-bind="data.title"></h4>
+        <div ng-repeat="i in data.picUrl">
+            <h5 ng-bind="i.pic_title"></h5>
+            <img ng-src="{{i.url}}" width="500">
+        </div>
+        <div ng-bind="data.content"></div>
+
+    </div>
+
+</div>
