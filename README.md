@@ -39,13 +39,23 @@ views--------------入口文件（用的ejs模板引擎）
 
 web----------------主要开发目录*
 
-web/app------------grunt压缩后的实际执行文件（lib是通用js库文件夹，是不进行监听压缩的）
+web/app------------grunt压缩后的实际执行文件（lib是通用js库文件夹，不进行监听压缩）
 
 web/css------------css文件夹（style中编写，min中会自动生成压缩版引入页面中）
 
 web/images---------项目内图片
 
 web/js-------------主要逻辑开发文件夹（编写完会自动压缩到app中）
+
+web/js/config------angular+require的配置,解决angular单页应用的局限，实现按需加载
+
+      =》app.js-----------配置按需加载
+
+      =》appregister.js---对app.js的封装
+
+      =》main.js----------requirejs的主文件
+
+      =》routermodel.js--angular路由
 
 web/view-----------项目页面路径（通过模块来分文件夹）
 
