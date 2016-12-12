@@ -1,2 +1,2 @@
 /*! web 2016-12-12 */
-define(["config/appregister","services/httpServices"],function(app){app.controller("homeCtrl",function($scope,getProducts){$scope.clickUrl=function(url){window.location.href="#/"+url}})});
+define(["config/appregister"],function(app){app.controller("homeCtrl",function($scope){$scope.clickUrl=function(url){window.location.href="#/"+url}})});

@@ -2,7 +2,7 @@
  * Created by Administrator on 2016/8/12.
  */
 define(['config/appregister'],function(app){
-    app.factory("getProducts",function($http){
+    app.factory("getCtrl",function($http){
         var baseUrl = "/service";
         return {
             getData : function(requestion) {

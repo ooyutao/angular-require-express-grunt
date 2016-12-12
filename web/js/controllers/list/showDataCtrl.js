@@ -3,7 +3,7 @@
  */
 define(['config/appregister', "services/httpServices","my97"], function (app) {
 
-    app.controller("showDataCtrl", function ($scope, $http, getProducts) {
+    app.controller("showDataCtrl", function ($scope, $http, getCtrl) {
         $scope.urlData = "";
 
         $scope.sousuo = function(){
@@ -11,15 +11,18 @@ define(['config/appregister', "services/httpServices","my97"], function (app) {
                 alert("选择日期!");
                 return false;
             }
-            var requestion = {
+            getCtrl.getData({//输入
                 type: "GET",
                 url: "/booksService/" + $scope.urlData
-            };
-            getProducts.getData(requestion).success(function (data) {
-                console.log(data);
-                $scope.data = data.result;
-            }).error(function () {
-                console.log("bad Requestion")
+            }).success(function (res) {//输出
+                console.log(res);
+                if(res.error_code == 0){
+                    $scope.data = res.result;
+                }else{
+                    alert(res.reason);
+                }
+            }).error(function () {//网络报错
+                alert("网络请求失败！");
             })
         }
 

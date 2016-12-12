@@ -3,10 +3,9 @@ var router = express.Router();
 var rest = require('restler');
 var logger = require('../Logger').logger;
 var servername = "http://v.juhe.cn/todayOnhistory";
-var DTservername = "http://dt.jd.com";
 
 router.get('/', function (req, res) {
-    res.render('index', {title: '京东金融'})
+    res.render('index', {title: 'demo'})
 });
 
 router.get('/service/booksService/:month/:day', function (req, res) {
@@ -18,13 +17,6 @@ router.get('/service/booksService/:month/:day', function (req, res) {
 
 router.get('/service/booksId/:id', function (req, res) {
     rest.get(servername + '/queryDetail.php?key=2b8a660b4df88775cb6bcff5b1ccb342&e_id=' + req.params.id, {rejectUnauthorized: false})
-        .on('complete', function (data) {
-            res.json(data);
-        });
-});
-
-router.get('/authentication/getLoginInfo', function (req, res) {
-    rest.get(DTservername + '/authentication/getLoginInfo', {rejectUnauthorized: false})
         .on('complete', function (data) {
             res.json(data);
         });
