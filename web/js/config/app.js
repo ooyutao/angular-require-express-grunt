@@ -46,6 +46,7 @@ define(["config/routermodel", 'angular', 'router'], function (routermodel) {
         }
         routerSet();
     }]).config(function($httpProvider) {
+        //监听AJAX请求，添加loading效果
         $httpProvider.interceptors.push(['$q', '$rootScope', function ($q, $rootScope) {
             return {
                 'request': function (config) {

@@ -1,2 +1,2 @@
 /*! web 2016-12-12 */
-define(["config/appregister","services/httpServices"],function(app){app.controller("contCtrl",function($scope,getCtrl,$location){getCtrl.getData({type:"GET",url:"/booksId/"+$location.search().id}).success(function(res){console.log(res),0==res.error_code?$scope.data=res.result[0]:alert(res.reason)}).error(function(){alert("��������ʧ�ܣ�")})})});
+define(["config/appregister","services/httpServices"],function(app){app.controller("contCtrl",function($scope,getCtrl,$location){getCtrl.getData({type:"GET",url:"/booksId/"+$location.search().id}).success(function(res){console.log(res),0==res.error_code?$scope.data=res.result[0]:alert(res.reason)}).error(function(){alert("网络请求失败！")})})});

@@ -11,7 +11,7 @@ a{color:#000; text-decoration:none;cursor:pointer; }
 a:hover{color:#555;}
 .clear{clear:both; height:0; overflow:hidden;}
 .flow{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
-.flyover{top: 0;left: 0;position: fixed;width: 100%;height: 100%;opacity: 0.5;background: black;z-index: 1000049;}
+.flyover{top: 0;left: 0;position: fixed;width: 100%;height: 100%;;background: rgba(0,0,0,.3);z-index: 1000049;}
 .flyover .alert-info{left: 50%;top: 50%;position: fixed;color: #fff;line-height:50px;width: 100px;height: 50px;margin: -25px auto auto -50px;}
 
 /******************  base  ********************/

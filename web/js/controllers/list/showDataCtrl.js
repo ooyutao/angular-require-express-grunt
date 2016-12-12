@@ -8,22 +8,23 @@ define(['config/appregister', "services/httpServices","my97"], function (app) {
 
         $scope.sousuo = function(){
             if($scope.urlData == ""){
-                alert("Ñ¡ÔñÈÕÆÚ!");
+                alert("é€‰æ‹©æ—¥æœŸ!");
                 return false;
             }
-            getCtrl.getData({//ÊäÈë
+            getCtrl.getData({//è¾“å…¥
                 type: "GET",
                 url: "/booksService/" + $scope.urlData
-            }).success(function (res) {//Êä³ö
+            }).success(function (res) {//è¾“å‡º
                 console.log(res);
                 if(res.error_code == 0){
                     $scope.data = res.result;
                 }else{
                     alert(res.reason);
                 }
-            }).error(function () {//ÍøÂç±¨´í
-                alert("ÍøÂçÇëÇóÊ§°Ü£¡");
+            }).error(function () {//ç½‘ç»œæŠ¥é”™
+                alert("ç½‘ç»œè¯·æ±‚å¤±è´¥ï¼");
             })
+
         }
 
     });

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var rest = require('restler');
 var logger = require('../Logger').logger;//记录后台日志
-var servername = "http://v.juhe.cn/todayOnhistory";//聚合数据提供接口
+var servername = "http://v.juhe.cn/todayOnhistory";//“聚合数据”提供的接口
 
 router.get('/', function (req, res) {
     res.render('index', {title: 'demo'})

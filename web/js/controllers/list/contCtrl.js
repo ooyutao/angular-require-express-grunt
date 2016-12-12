@@ -5,10 +5,10 @@ define(['config/appregister', "services/httpServices"], function (app) {
 
     app.controller("contCtrl", function ($scope, getCtrl,$location) {
 
-        getCtrl.getData({//ÊäÈë
+        getCtrl.getData({//è¾“å…¥
             type: "GET",
             url: "/booksId/" + $location.search().id
-        }).success(function (res) {//Êä³ö
+        }).success(function (res) {//è¾“å‡º
             console.log(res);
             if(res.error_code == 0){
                 $scope.data = res.result[0];
@@ -16,9 +16,10 @@ define(['config/appregister', "services/httpServices"], function (app) {
                 alert(res.reason);
             }
 
-        }).error(function () {//ÍøÂç±¨´í
-            alert("ÍøÂçÇëÇóÊ§°Ü£¡");
+        }).error(function () {//ç½‘ç»œæŠ¥é”™
+            alert("ç½‘ç»œè¯·æ±‚å¤±è´¥ï¼");
         })
+
 
     });
 

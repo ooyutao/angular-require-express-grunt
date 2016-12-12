@@ -1,5 +1,6 @@
 module.exports = function (grunt) {
-
+    //配置编码
+    grunt.file.defaultEncoding = 'utf-8';
     // 构建任务配置
     grunt.initConfig({
 
