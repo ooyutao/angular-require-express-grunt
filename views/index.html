@@ -2,13 +2,19 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>demo</title>
+    <title><%=title%></title>
     <link rel="stylesheet" href="./css/min/style.css"/>
 </head>
 <body>
 <div ui-view></div>
 
-<!--<loading></loading>-->
+
+<div class="flyover" ng-show="loading">
+    <div class="alert-info">
+        <strong>加载中...</strong>
+    </div>
+</div>
+
 <script type="text/javascript" src="./app/lib/require.js" data-main="./app/config/main"></script>
 </body>
 </html>

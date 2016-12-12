@@ -3,7 +3,5 @@ define(['config/appregister'],function(app){
         $scope.clickUrl = function(url){
             window.location.href = "#/"+url;
         }
-
-
 	})
 })

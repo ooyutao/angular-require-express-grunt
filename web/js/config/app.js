@@ -23,7 +23,7 @@ define(["config/routermodel", 'angular', 'router'], function (routermodel) {
             }
             var strurl = item.ctrl;
             var ctrlName = strurl.substring(strurl.lastIndexOf('/')+1);
-            //todo 类型判断别待完善
+
             $stateProvider.state(item.state, {
                 url:"/"+ item.state,
                 controller: ctrlName,
@@ -45,6 +45,28 @@ define(["config/routermodel", 'angular', 'router'], function (routermodel) {
             }
         }
         routerSet();
-    }])
+    }]).config(function($httpProvider) {
+        $httpProvider.interceptors.push(['$q', '$rootScope', function ($q, $rootScope) {
+            return {
+                'request': function (config) {
+                    $rootScope.loading = true;
+                    return $q.resolve(config);
+                },
+                'response': function (response) {
+                    $rootScope.loading = false;
+                    return $q.resolve(response);
+                },
+                'requestError': function (rejection) {
+                    $rootScope.loading = false;
+                    return $q.reject(rejection);
+                },
+                'responseError': function (rejection) {
+                    $rootScope.loading = false;
+                    return $q.reject(rejection);
+                }
+            }
+        }]);
+    });
+
     return app;
 })
