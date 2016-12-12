@@ -7,7 +7,7 @@ node v6.7.0
 npm 3.10.3
 
 下载项目
-git clone ...
+git clone https://github.com/ooyutao/angular-require-express.git
 
 进入项目
 cd angular-require-express
